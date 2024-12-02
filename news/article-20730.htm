@@ -2,12 +2,11 @@
 <html class="no-js" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://quantumultxgithub.github.io" />
+        <link rel="canonical" href="https://quantumultxgithub.github.io/news/article-20730.htm" />
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>2024-11归档 - QuantumultX Github(圈X)节点订阅官网</title>
-        <meta name="keywords" content="2024-11归档" />
-        <meta name="description" content="2024-11归档" />
+    <title>java中Date与LocalDate、LocalDate、LocalDateTime互相转化</title>
+        <meta name="description" content="一、Date转化为LocalDate、LocalDate、LocalDateTime 1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime     public st" />
         <link rel="icon" href="__ADDON__/img/quantumultxgithub/favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS here -->
@@ -35,7 +34,7 @@
      crossorigin="anonymous"></script>
 </head>
 
-<body data-page="category">
+<body data-page="detail">
         <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -96,9 +95,9 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h1>2024-11 归档</h1>
+                                <h1>java中Date与LocalDate、LocalDate、LocalDateTime互相转化</h1>
                                 <p class="desc">
-                                    <a href="/">首页</a> / <span>2024-11 归档</span>
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
                                 </p>
                             </div>
                         </div>
@@ -112,70 +111,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                        <div class="xcblog-blog-list">
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-04">
-                                <div class="col-md-3">
-                                    <div class="trusted-img">
-                                        <a href="/free-nodes/2024-11-4-quantumult-x-node.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240814-1/9d7e4c3653e024de86837842f2417d1c.webp" alt="「11月4日」最高速度18.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">
-                                        </a>
+                                          				  				  				<div id="content_views" class="htmledit_views"> <h2>一、Date转化为LocalDate、LocalDate、LocalDateTime</h2> <p>1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         //返回当前系统默认的时区         ZoneId zoneId = ZoneId.systemDefault();          //atZone()方法返回在指定时区,从该Instant生成的ZonedDateTime         ZonedDateTime zonedDateTime = date.toInstant().atZone(zoneId);         LocalDate localDate = zonedDateTime.toLocalDate();         LocalTime localTime = zonedDateTime.toLocalTime();         LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();     }</code></pre> <p>2.第二种，同样使用ZoneId、Instant，但最后不同</p> <pre><code class="language-java">public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = localDateTime.toLocalDate();         LocalTime localTime = localDateTime.toLocalTime();     }</code></pre> <p>3.第三种拓展，java9中新增了LocalDate、LocalTime的ofInstan()方法，所以第二种也可以写成：</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = LocalDate.ofInstant(instant, zoneId);         LocalTime localTime = LocalTime.ofInstant(instant, zoneId);     }</code></pre> <h2>二、LocalDate、LocalDate、LocalDateTime转化Date</h2> <p>1. java.time.LocalDateTime → java.util.Date</p> <pre><code class="language-java">    public void LocalDateTimeToDate() {         LocalDateTime localDateTime = LocalDateTime.now();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zoneId).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>2. java.time.LocalDate → java.util.Date</p> <pre><code class="language-java">    public void LocalDateToDate() {         LocalDate localDate = LocalDate.now();         ZoneId zone = ZoneId.systemDefault();         //将此日期与午夜时间组合在一起，以便在此日期开始时创建LocalDateTime，即生成2017-02-03T00:00         Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>3. java.time.LocalTime →&nbsp;java.util.Date</p> <pre><code class="language-java">    public void LocalTimeToDate() {         LocalTime localTime = LocalTime.now();         LocalDate localDate = LocalDate.now();         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);         ZoneId zone = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <h2>三、LocalDate、LocalDate、LocalDateTime中还有很多对日期，时间的操作方法，可以精细到毫秒，在此就不一一介绍了，具体可参考以下文章：</h2> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/qingyunfc/p/10236734.html"  title="https://www.cnblogs.com/qingyunfc/p/10236734.html" rel="nofollow">https://www.cnblogs.com/qingyunfc/p/10236734.html</a></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-20271.htm">宠物零食制作设备和配方有哪些呢（宠物零食制作设备和配方有哪些呢英语）</a></p>
+                                        <p>下一个：<a href="/news/article-20731.htm">猫味道很大房屋内怎么去除（房间猫咪异味怎样彻底清除）</a></p>
                                     </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-4-quantumult-x-node.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">「11月4日」最高速度18.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了日本、新加坡、香港、欧洲、加拿大、美国、韩国等地区,最高速度可达18.7 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-03">
-                                <div class="col-md-3">
-                                    <div class="trusted-img">
-                                        <a href="/free-nodes/2024-11-3-quantumult-x-node-windows.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240814-1/367ea706752d95b15c0f68d64f6a7594.webp" alt="「11月3日」最高速度22.9M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">
-                                        </a>
                                     </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-3-quantumult-x-node-windows.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">「11月3日」最高速度22.9M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了日本、欧洲、韩国、加拿大、新加坡、美国、香港等地区,最高速度可达22.9 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-02">
-                                <div class="col-md-3">
-                                    <div class="trusted-img">
-                                        <a href="/free-nodes/2024-11-2-quantumult-x-node-github.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240814-1/367ea706752d95b15c0f68d64f6a7594.webp" alt="「11月2日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-2-quantumult-x-node-github.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">「11月2日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了香港、日本、欧洲、加拿大、韩国、新加坡、美国等地区,最高速度可达18.6 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-01">
-                                <div class="col-md-3">
-                                    <div class="trusted-img">
-                                        <a href="/free-nodes/2024-11-1-quantumult-x-node-github.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240814-1/0fdd01e4551f181d744b0eb295bd0938.webp" alt="「11月1日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-1-quantumult-x-node-github.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">「11月1日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了欧洲、日本、香港、美国、韩国、新加坡、加拿大等地区,最高速度可达19.7 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                            
-                            <ul class="pagination"><li><a href="/date/2024-11/page-3.htm">&laquo;</a></li> <li><a href="/date/2024-11/">1</a></li><li><a href="/date/2024-11/page-2.htm">2</a></li><li><a href="/date/2024-11/page-3.htm">3</a></li><li class="active"><span>4</span></li> <li class="disabled"><span>&raquo;</span></li></ul>                        </div>
-                    </div>
                     <div class="col-md-3">
                         <div class="panel panel-default">
     <div class="panel-heading">
@@ -183,16 +124,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-18919.htm" title="中农大动物医院地址（中国农大动物医院地址）">中农大动物医院地址（中国农大动物医院地址）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-22-quantumult-x-node-share.htm" title="「10月22日」最高速度19.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月22日」最高速度19.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-2-today-quantumult-x-node.htm" title="「9月2日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月2日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/news/article-20270.htm" title="领养宠物的软件平台哪个好 领养宠物的软件平台哪个好用">领养宠物的软件平台哪个好 领养宠物的软件平台哪个好用</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-2-quantumult-x-node-github.htm" title="「11月2日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月2日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-6-free-subscribe-node.htm" title="「10月6日」最高速度20M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月6日」最高速度20M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-19-free-subscribe-node.htm" title="「9月19日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月19日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-4-free-node-subscribe-links.htm" title="「10月4日」最高速度19.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月4日」最高速度19.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-19358.htm" title="新疆领养猫 新疆领养猫狗的地方">新疆领养猫 新疆领养猫狗的地方</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-17-quantumult-x-node-windows.htm" title="「8月17日」最高速度22.1M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月17日」最高速度22.1M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-20-free-subscribe-node.htm" title="「8月20日」最高速度21.1M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月20日」最高速度21.1M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-10-1-today-quantumult-x-node.htm" title="「10月1日」最高速度18.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月1日」最高速度18.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-30-free-node-subscribe-links.htm" title="「11月30日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月30日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-10-8-free-quantumult-x-node.htm" title="「10月8日」最高速度20.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月8日」最高速度20.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-3-quantumult-x-node-share.htm" title="「12月3日」最高速度22.9M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「12月3日」最高速度22.9M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-28-quantumult-x-node-share.htm" title="「10月28日」最高速度21.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月28日」最高速度21.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-3-quantumult-x-node-windows.htm" title="「11月3日」最高速度22.9M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月3日」最高速度22.9M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-19813.htm" title="宠物粮供应商电话（宠物粮供应商电话是多少）">宠物粮供应商电话（宠物粮供应商电话是多少）</a></li>
                     </ul>
     </div>
 </div>
