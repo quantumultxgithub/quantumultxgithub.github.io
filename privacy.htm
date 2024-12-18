@@ -2,11 +2,12 @@
 <html class="no-js" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://quantumultxgithub.github.io/news/article-27189.htm" />
+        <link rel="canonical" href="https://quantumultxgithub.github.io" />
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Linux中磁盘分区清理方法</title>
-        <meta name="description" content="&nbsp; &nbsp; &nbsp; &nbsp;当打开Linux系统准备下载软件时，发现磁盘分区内存已经被占满，没有足够的空间去下载软件。打开终端命令行输入以下命令： df -H //此处的h可" />
+    <title>隐私申明 - QuantumultX Github(圈X)节点订阅官网</title>
+        <meta name="keywords" content="隐私申明 - QuantumultX Github(圈X)节点订阅官网" />
+        <meta name="description" content="隐私申明 - QuantumultX Github(圈X)节点订阅官网" />
         <link rel="icon" href="/assets/website/img/quantumultxgithub/favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS here -->
@@ -34,7 +35,7 @@
      crossorigin="anonymous"></script>
 </head>
 
-<body data-page="detail">
+<body data-page="newly_discovered_nodes">
         <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -95,9 +96,9 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h1>Linux中磁盘分区清理方法</h1>
+                                <h1>隐私申明</h1>
                                 <p class="desc">
-                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                    <a href="/">首页</a> / <span>隐私申明</span>
                                 </p>
                             </div>
                         </div>
@@ -111,12 +112,52 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                          				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp; &nbsp; &nbsp; &nbsp;当打开Linux系统准备下载软件时，发现磁盘分区内存已经被占满，没有足够的空间去下载软件。打开终端命令行输入以下命令：</p> <pre><code>df -H //此处的h可以是大写也可以小写，不影响结果</code></pre> <p><img fetchpriority="high" decoding="async" alt="" height="230" src="http://img.555519.xyz/uploads3/20220608/97d7461908a02b361f223761b4c1c5da.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp;该命令用于显示系统上可使用的磁盘空间，默认显示单位为KB。日常普遍用该命令可以查看磁盘被占用了多少空间、还剩多少空间等信息。</p> <ul> <li><span style="color:#6eaad7;"><em>语法格式 df [参数] [指定文件]</em></span></li> <li><span style="color:#6eaad7;"><em>常用参数： -a显示所有系统文件</em></span></li> <li><span style="color:#6eaad7;"><em>-B 指定显示时的块大小</em></span></li> <li><span style="color:#6eaad7;"><em>-h以容易阅读的方式显示</em></span></li> <li><span style="color:#6eaad7;"><em>-H以1000字节为换算单位来显示</em></span></li> <li><span style="color:#6eaad7;"><em>-i显示索引字节信息</em></span></li> <li><span style="color:#6eaad7;"><em>-k指定块大小为1KB</em></span></li> <li><span style="color:#6eaad7;"><em>-l只显示本地文件系统</em></span></li> <li><span style="color:#6eaad7;"><em>-t 只显示指定类型的文件系统</em></span></li> <li><span style="color:#6eaad7;"><em>-T输出时显示文件系统类型</em></span></li> <li><span style="color:#6eaad7;"><em>-- -sync在取得磁盘使用信息前，先执行sync命令</em></span></li> </ul> <p>通过查阅各种资料以及对这些方法的一遍遍测试，终于找到一种有效的磁盘分区处理方法。</p> </h1> <pre><code>sudo du -sh /* |sort -nr</code></pre> <p>&nbsp; &nbsp; &nbsp; &nbsp; 该命令是查找并排序显示文件在磁盘占用空间。运行该命令后发现/home,/lib,/var,/usr这几个文件夹都占了比较多的磁盘分区。<img decoding="async" alt="" height="577" src="http://img.555519.xyz/uploads3/20220608/cfde5dedd2ccf752070a1475de4a8d59.jpg"></p> </h1> <pre><code>sudo du -sh /usr/* |sort -nr</code></pre> <p>运行该命令之后发现/usr的文件夹李都是有用的文件，不能进行清理。<img decoding="async" alt="" height="205" src="http://img.555519.xyz/uploads3/20220608/641d24b41f54adcde090661af762ebe8.jpg"></p> <p>&nbsp;因此继续细分其他大文件夹，寻找无用的文件：</p> <pre><code>sudo du -sh /home/* |sort -nr</code></pre> <p>运行该命令之后发现有两个用户是基本不适用的，且占用磁盘空间比较大：</p> <p><img loading="lazy" decoding="async" alt="" height="107" src="http://img.555519.xyz/uploads3/20220608/6e03dd707cb6fccb00f1c141ec596f0c.jpg"></p> </h1> <pre><code>sudo rm -rf /home/hadoop_lxl</code></pre> <h2>4.删除成功后再次输入以下命令来检查磁盘占用情况：</h2> <pre><code>df -h</code></pre> <p>运行该命令后发现磁盘分区sda1已经空出来一部分空间。</p> <p><img loading="lazy" decoding="async" alt="" height="193" src="http://img.555519.xyz/uploads3/20220608/0cd77277820ef5dae129109d55327bff.jpg"></p> <p>&nbsp;至此磁盘分区的清理完成，当然，如果你觉得所剩磁盘分区还不够大，可以继续使用以上命令显示占用磁盘较大的文件，并根据自己的情况来删除。</p> </div> 			                <div class="clearfix"></div>
-                <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-26725.htm">学宠物美容师怎么样,有前景吗知乎（学宠物美容师怎么样,有前景吗知乎）</a></p>
-                                        <p>下一个：<a href="/news/article-27190.htm">动物疫苗注射方法及部位（动物 疫苗）</a></p>
-                                    </div>
-                                    </div>
+                        <p>本平台专注于为用户提供V2ray、Clash等免费节点订阅服务，我们深知用户隐私的重要性，并致力于保护用户的个人信息和隐私安全。本隐私声明旨在明确告知用户本平台如何收集、使用、存储和保护用户的个人信息。</p>
+<p>一、信息收集</p>
+<ol>
+    <li>
+        <p><strong>用户主动提供的信息</strong>：当用户在本平台注册、使用服务或参与特定活动时，可能会主动提供个人信息，如姓名、邮箱地址等。这些信息将仅用于提供服务或活动的目的，并在用户明确同意的情况下进行收集。</p>
+    </li>
+    <li>
+        <p><strong>服务使用数据</strong>：为了优化用户体验和服务质量，本平台可能会自动收集用户在使用服务过程中产生的数据，如访问记录、节点使用情况等。这些数据将用于分析服务使用情况，以便我们持续改进服务。</p>
+    </li>
+</ol>
+<p>二、信息使用</p>
+<ol>
+    <li>
+        <p><strong>提供服务</strong>：本平台将使用收集到的信息来提供用户所需的服务，包括但不限于节点订阅、服务更新通知等。</p>
+    </li>
+    <li>
+        <p><strong>数据分析</strong>：我们可能会对收集到的数据进行分析，以了解用户的使用习惯和需求，从而改进和优化服务。</p>
+    </li>
+    <li>
+        <p><strong>法律合规</strong>：在必要时，我们可能会根据法律法规的要求，向相关部门提供用户的个人信息，以配合执法或调查工作。</p>
+    </li>
+</ol>
+<p>三、信息存储与保护</p>
+<ol>
+    <li>
+        <p><strong>信息安全</strong>：本平台将采取必要的技术和管理措施，确保用户个人信息的安全。我们会对存储的数据进行加密处理，并定期进行安全检查和漏洞修复。</p>
+    </li>
+    <li>
+        <p><strong>信息存储期限</strong>：我们将根据服务需求和相关法律法规的要求，合理确定用户个人信息的存储期限。一旦超出存储期限，我们将对个人信息进行删除或匿名化处理。</p>
+    </li>
+</ol>
+<p>四、用户权利</p>
+<ol>
+    <li>
+        <p><strong>访问与更正</strong>：用户有权访问自己的个人信息，并对其进行更正。用户可以通过本平台提供的联系方式，申请查看或修改自己的个人信息。</p>
+    </li>
+    <li>
+        <p><strong>删除</strong>：在用户停止使用服务或注销账户后，我们将根据用户的请求，删除或匿名化处理其个人信息。</p>
+    </li>
+    <li>
+        <p><strong>投诉与举报</strong>：如果用户认为本平台在处理个人信息方面存在违法行为，可以通过本平台提供的联系方式进行投诉或举报。</p>
+    </li>
+</ol>
+<p>五、隐私声明的更新与修改</p>
+<p>本平台有权根据实际情况和法律法规的变化，对本隐私声明进行更新和修改。任何对隐私声明的修改都将通过本平台公告或电子邮件等方式通知用户。用户在使用服务时，应定期查看隐私声明，以了解最新的个人信息保护措施。</p>
+                    </div>
                     <div class="col-md-3">
                         <div class="panel panel-default">
     <div class="panel-heading">
@@ -124,16 +165,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-9-8-node-share-links.htm" title="「9月8日」最高速度22.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月8日」最高速度22.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/news/article-27190.htm" title="动物疫苗注射方法及部位（动物 疫苗）">动物疫苗注射方法及部位（动物 疫苗）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-6-quantumult-x-node-share.htm" title="「11月6日」最高速度19.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月6日」最高速度19.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-1-quantumult-x-node-github.htm" title="「11月1日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月1日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-2-free-node-subscribe-links.htm" title="「10月2日」最高速度21M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月2日」最高速度21M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-13-free-node-subscribe.htm" title="「9月13日」最高速度20.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月13日」最高速度20.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-20-free-subscribe-node.htm" title="「8月20日」最高速度21.1M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月20日」最高速度21.1M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-27-free-node-subscribe-links.htm" title="「9月27日」最高速度19.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月27日」最高速度19.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-30-free-node-subscribe-links.htm" title="「11月30日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月30日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-28-latest-quantumult-x-node.htm" title="「8月28日」最高速度19.3M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月28日」最高速度19.3M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-18-latest-quantumult-x-node.htm" title="「11月18日」最高速度21.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月18日」最高速度21.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-9-quantumult-x-node-github.htm" title="「10月9日」最高速度19.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月9日」最高速度19.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-23-latest-quantumult-x-node.htm" title="「9月23日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月23日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-10-free-subscribe-node.htm" title="「12月10日」最高速度22.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「12月10日」最高速度22.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-26244.htm" title="小型饲料颗粒机价格（小型饲料颗粒机价格是多少）">小型饲料颗粒机价格（小型饲料颗粒机价格是多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-10-today-quantumult-x-node.htm" title="「11月10日」最高速度18.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月10日」最高速度18.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-16-quantumult-x-node.htm" title="「9月16日」最高速度20.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月16日」最高速度20.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-19-free-quantumult-x-node.htm" title="「10月19日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月19日」最高速度18.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-31-quantumult-x-github.htm" title="「10月31日」最高速度20.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月31日」最高速度20.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-25-free-quantumult-x-node.htm" title="「11月25日」最高速度22M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月25日」最高速度22M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
                     </ul>
     </div>
 </div>
