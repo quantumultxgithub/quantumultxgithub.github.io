@@ -2,12 +2,11 @@
 <html class="no-js" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://quantumultxgithub.github.io" />
+        <link rel="canonical" href="https://quantumultxgithub.github.io/news/article-28123.htm" />
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>2024-11归档 - QuantumultX Github(圈X)节点订阅官网</title>
-        <meta name="keywords" content="2024-11归档" />
-        <meta name="description" content="2024-11归档" />
+    <title>MySQL的存储函数与存储过程的区别解析_Mysql</title>
+        <meta name="description" content="MySQL存储函数（自定义函数），函数一般用于计算和返回一个值，可以将经常需要使用的计算或功能写成一个函数。 存储函数和存储过程一样，都是在数据库中定义一些 SQL 语句的集合。 存储函数与存储过程的" />
         <link rel="icon" href="/assets/website/img/quantumultxgithub/favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS here -->
@@ -35,7 +34,7 @@
      crossorigin="anonymous"></script>
 </head>
 
-<body data-page="category">
+<body data-page="detail">
         <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -96,9 +95,9 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h1>2024-11 归档</h1>
+                                <h1>MySQL的存储函数与存储过程的区别解析_Mysql</h1>
                                 <p class="desc">
-                                    <a href="/">首页</a> / <span>2024-11 归档</span>
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
                                 </p>
                             </div>
                         </div>
@@ -112,70 +111,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                        <div class="xcblog-blog-list">
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-04">
-                                <div class="col-md-3">
-                                    <div class="trusted-img">
-                                        <a href="/free-nodes/2024-11-4-quantumult-x-node.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240814-1/9d7e4c3653e024de86837842f2417d1c.webp" alt="「11月4日」最高速度18.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">
-                                        </a>
+                                        <input type="hidden" id="share-website-info" data-name="QuantumultX Node(圈X)官方节点站" data-url="https://quantumultxnode.github.io">
+                  				  				  				<p>MySQL存储函数（自定义函数），函数一般用于计算和返回一个值，可以将经常需要使用的计算或功能写成一个函数。</p> <p>存储函数和存储过程一样，都是在数据库中定义一些 SQL 语句的集合。</p> <p>存储函数与存储过程的区别</p> <p><strong>1.存储函数有且只有一个返回值，而存储过程可以有多个返回值，也可以没有返回值。</strong></p> <p>2.<strong>存储函数只能有输入参数</strong>，而且不能带in, 而存储过程可以有多个in,out,inout参数。</p> <p>3.存储过程中的语句功能更强大，存储过程可以实现很复杂的业务逻辑<strong>，而函数有很多限制，如不能在函数中使用insert,update,delete,create等语句；</strong></p> <p>4.存储函数只完成查询的工作，可接受输入参数并返回一个结果，也就是函数实现的功能针对性比较强。</p> <p><strong>5.存储过程可以调用存储函数、但函数不能调用存储过程。</strong></p> <p>6.存储过程一般是作为一个独立的部分来执行(call调用)。而函数可以作为查询语句的一个部分来调用.</p> <div class="ay1code"> <pre class="brush:sql;">create function func_name ([param_name type[,...]])  returns type  [characteristic ...]   begin      routine_body  end;</pre> </div> <p>参数说明：<br />（1）func_name ：存储函数的名称。<br />（2）param_name type：可选项，指定存储函数的参数。type参数用于指定存储函数的参数类型，该类型可以是MySQL数据库中所有支持的类型。<br />（3）RETURNS type：指定返回值的类型。<br />（4）characteristic：可选项，指定存储函数的特性。<br />（5）routine_body：SQL代码内容。</p> <div class="ay1code"> <pre class="brush:sql;">create database mydb9_function;  -- 导入测试数据  use mydb9_function;  set global log_bin_trust_function_creators=TRUE; -- 信任子程序的创建者     -- 创建存储函数-没有输输入参数  drop function if exists myfunc1_emp;     delimiter $$  create function myfunc1_emp() returns int  begin    declare cnt int default 0;      select count(*) into  cnt from emp;    return cnt;  end $$  delimiter ;  -- 调用存储函数  select myfunc1_emp();</pre> </div> <div class="ay1code"> <pre class="brush:sql;">-- 创建存储过程-有输入参数  drop function if exists myfunc2_emp;  delimiter $$  create function myfunc2_emp(in_empno int) returns varchar(50)  begin      declare out_name varchar(50);      select ename into out_name from emp where  empno = in_empno;      return out_name;  end $$  delimiter ;  select myfunc2_emp(1008);</pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-27662.htm">宠物回收平台有哪些 宠物回收平台有哪些公司</a></p>
+                                        <p>下一个：<a href="/news/article-28124.htm">为什么猫不用打狂犬疫苗了（为什么猫不打疫苗不能洗澡）</a></p>
                                     </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-4-quantumult-x-node.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">「11月4日」最高速度18.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了日本、新加坡、香港、欧洲、加拿大、美国、韩国等地区,最高速度可达18.7 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-03">
-                                <div class="col-md-3">
-                                    <div class="trusted-img">
-                                        <a href="/free-nodes/2024-11-3-quantumult-x-node-windows.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240814-1/367ea706752d95b15c0f68d64f6a7594.webp" alt="「11月3日」最高速度22.9M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">
-                                        </a>
                                     </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-3-quantumult-x-node-windows.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">「11月3日」最高速度22.9M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了日本、欧洲、韩国、加拿大、新加坡、美国、香港等地区,最高速度可达22.9 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-02">
-                                <div class="col-md-3">
-                                    <div class="trusted-img">
-                                        <a href="/free-nodes/2024-11-2-quantumult-x-node-github.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240814-1/367ea706752d95b15c0f68d64f6a7594.webp" alt="「11月2日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-2-quantumult-x-node-github.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">「11月2日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了香港、日本、欧洲、加拿大、韩国、新加坡、美国等地区,最高速度可达18.6 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-01">
-                                <div class="col-md-3">
-                                    <div class="trusted-img">
-                                        <a href="/free-nodes/2024-11-1-quantumult-x-node-github.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20240814-1/0fdd01e4551f181d744b0eb295bd0938.webp" alt="「11月1日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-1-quantumult-x-node-github.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">「11月1日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了欧洲、日本、香港、美国、韩国、新加坡、加拿大等地区,最高速度可达19.7 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                            
-                            <ul class="pagination"><li><a href="/date/2024-11/page-3.htm">&laquo;</a></li> <li><a href="/date/2024-11/">1</a></li><li><a href="/date/2024-11/page-2.htm">2</a></li><li><a href="/date/2024-11/page-3.htm">3</a></li><li class="active"><span>4</span></li> <li class="disabled"><span>&raquo;</span></li></ul>                        </div>
-                    </div>
                     <div class="col-md-3">
                         <div class="panel panel-default">
     <div class="panel-heading">
@@ -183,16 +125,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-21189.htm" title="宠物美容得学多久（宠物美容难不难学）">宠物美容得学多久（宠物美容难不难学）</a></li>
-                        <li class="py-2"><a href="/news/article-19356.htm" title="郑州宠物打疫苗在哪里（郑州宠物疫苗批发地址）">郑州宠物打疫苗在哪里（郑州宠物疫苗批发地址）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-2-node-share.htm" title="「12月2日」最高速度21.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「12月2日」最高速度21.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/news/article-18919.htm" title="中农大动物医院地址（中国农大动物医院地址）">中农大动物医院地址（中国农大动物医院地址）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-26-quantumult-x-node-share.htm" title="「8月26日」最高速度22.7M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月26日」最高速度22.7M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-13-quantumult-x-node-windows.htm" title="「12月13日」最高速度22.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「12月13日」最高速度22.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/news/article-25334.htm" title="南京宠物猫领养中心地址电话查询（南京猫咪领养中心）">南京宠物猫领养中心地址电话查询（南京猫咪领养中心）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-7-node-share.htm" title="「12月7日」最高速度22.8M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「12月7日」最高速度22.8M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-3-quantumult-x-node-share.htm" title="「10月3日」最高速度21.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月3日」最高速度21.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-8-30-quantumult-x-node-windows.htm" title="「8月30日」最高速度22.5M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月30日」最高速度22.5M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-28-quantumult-x-node-github.htm" title="「9月28日」最高速度19.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月28日」最高速度19.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-24-free-quantumult-x-node.htm" title="「11月24日」最高速度22.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月24日」最高速度22.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-13-quantumult-x-node-share.htm" title="「10月13日」最高速度22M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月13日」最高速度22M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-23-today-quantumult-x-node.htm" title="「11月23日」最高速度22.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月23日」最高速度22.5M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-7-quantumult-x-github.htm" title="「11月7日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月7日」最高速度19.7M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-quantumult-x-node-windows.htm" title="「12月14日」最高速度22.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「12月14日」最高速度22.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-13-quantumult-x-node.htm" title="「11月13日」最高速度21.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月13日」最高速度21.1M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-16-free-high-speed-nodes.htm" title="「12月16日」最高速度20.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「12月16日」最高速度20.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-28-today-quantumult-x-node.htm" title="「11月28日」最高速度18.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月28日」最高速度18.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
                     </ul>
     </div>
 </div>
