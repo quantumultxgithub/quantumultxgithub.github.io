@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>java中Date与LocalDate、LocalDate、LocalDateTime互相转化</title>
         <meta name="description" content="一、Date转化为LocalDate、LocalDate、LocalDateTime 1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime     public st" />
-        <link rel="icon" href="__ADDON__/img/quantumultxgithub/favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="/assets/website/img/quantumultxgithub/favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS here -->
     <link rel="stylesheet" href="/assets/website/css/quantumultxgithub/bootstrap.min.css">
@@ -111,7 +111,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                          				  				  				<div id="content_views" class="htmledit_views"> <h2>一、Date转化为LocalDate、LocalDate、LocalDateTime</h2> <p>1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         //返回当前系统默认的时区         ZoneId zoneId = ZoneId.systemDefault();          //atZone()方法返回在指定时区,从该Instant生成的ZonedDateTime         ZonedDateTime zonedDateTime = date.toInstant().atZone(zoneId);         LocalDate localDate = zonedDateTime.toLocalDate();         LocalTime localTime = zonedDateTime.toLocalTime();         LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();     }</code></pre> <p>2.第二种，同样使用ZoneId、Instant，但最后不同</p> <pre><code class="language-java">public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = localDateTime.toLocalDate();         LocalTime localTime = localDateTime.toLocalTime();     }</code></pre> <p>3.第三种拓展，java9中新增了LocalDate、LocalTime的ofInstan()方法，所以第二种也可以写成：</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = LocalDate.ofInstant(instant, zoneId);         LocalTime localTime = LocalTime.ofInstant(instant, zoneId);     }</code></pre> <h2>二、LocalDate、LocalDate、LocalDateTime转化Date</h2> <p>1. java.time.LocalDateTime → java.util.Date</p> <pre><code class="language-java">    public void LocalDateTimeToDate() {         LocalDateTime localDateTime = LocalDateTime.now();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zoneId).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>2. java.time.LocalDate → java.util.Date</p> <pre><code class="language-java">    public void LocalDateToDate() {         LocalDate localDate = LocalDate.now();         ZoneId zone = ZoneId.systemDefault();         //将此日期与午夜时间组合在一起，以便在此日期开始时创建LocalDateTime，即生成2017-02-03T00:00         Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>3. java.time.LocalTime →&nbsp;java.util.Date</p> <pre><code class="language-java">    public void LocalTimeToDate() {         LocalTime localTime = LocalTime.now();         LocalDate localDate = LocalDate.now();         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);         ZoneId zone = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <h2>三、LocalDate、LocalDate、LocalDateTime中还有很多对日期，时间的操作方法，可以精细到毫秒，在此就不一一介绍了，具体可参考以下文章：</h2> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/qingyunfc/p/10236734.html"  title="https://www.cnblogs.com/qingyunfc/p/10236734.html" rel="nofollow">https://www.cnblogs.com/qingyunfc/p/10236734.html</a></p> </div> 			                <div class="clearfix"></div>
+                                        <input type="hidden" id="share-website-info" data-name="QuantumultX Node(圈X)官方节点站" data-url="https://quantumultxnode.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h2>一、Date转化为LocalDate、LocalDate、LocalDateTime</h2> <p>1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         //返回当前系统默认的时区         ZoneId zoneId = ZoneId.systemDefault();          //atZone()方法返回在指定时区,从该Instant生成的ZonedDateTime         ZonedDateTime zonedDateTime = date.toInstant().atZone(zoneId);         LocalDate localDate = zonedDateTime.toLocalDate();         LocalTime localTime = zonedDateTime.toLocalTime();         LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();     }</code></pre> <p>2.第二种，同样使用ZoneId、Instant，但最后不同</p> <pre><code class="language-java">public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = localDateTime.toLocalDate();         LocalTime localTime = localDateTime.toLocalTime();     }</code></pre> <p>3.第三种拓展，java9中新增了LocalDate、LocalTime的ofInstan()方法，所以第二种也可以写成：</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = LocalDate.ofInstant(instant, zoneId);         LocalTime localTime = LocalTime.ofInstant(instant, zoneId);     }</code></pre> <h2>二、LocalDate、LocalDate、LocalDateTime转化Date</h2> <p>1. java.time.LocalDateTime → java.util.Date</p> <pre><code class="language-java">    public void LocalDateTimeToDate() {         LocalDateTime localDateTime = LocalDateTime.now();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zoneId).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>2. java.time.LocalDate → java.util.Date</p> <pre><code class="language-java">    public void LocalDateToDate() {         LocalDate localDate = LocalDate.now();         ZoneId zone = ZoneId.systemDefault();         //将此日期与午夜时间组合在一起，以便在此日期开始时创建LocalDateTime，即生成2017-02-03T00:00         Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>3. java.time.LocalTime →&nbsp;java.util.Date</p> <pre><code class="language-java">    public void LocalTimeToDate() {         LocalTime localTime = LocalTime.now();         LocalDate localDate = LocalDate.now();         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);         ZoneId zone = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <h2>三、LocalDate、LocalDate、LocalDateTime中还有很多对日期，时间的操作方法，可以精细到毫秒，在此就不一一介绍了，具体可参考以下文章：</h2> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/qingyunfc/p/10236734.html"  title="https://www.cnblogs.com/qingyunfc/p/10236734.html" rel="nofollow">https://www.cnblogs.com/qingyunfc/p/10236734.html</a></p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-20271.htm">宠物零食制作设备和配方有哪些呢（宠物零食制作设备和配方有哪些呢英语）</a></p>
                                         <p>下一个：<a href="/news/article-20731.htm">猫味道很大房屋内怎么去除（房间猫咪异味怎样彻底清除）</a></p>
@@ -124,16 +125,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-8-14-free-high-speed-nodes.htm" title="「8月14日」最高速度19.4M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月14日」最高速度19.4M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-18-latest-quantumult-x-node.htm" title="「11月18日」最高速度21.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月18日」最高速度21.2M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-4-free-subscribe-node.htm" title="「12月4日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「12月4日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-18-quantumult-x-node-github.htm" title="「8月18日」最高速度22M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月18日」最高速度22M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-24-node-share.htm" title="「10月24日」最高速度21.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月24日」最高速度21.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-29-quantumult-x-github.htm" title="「8月29日」最高速度19.7M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月29日」最高速度19.7M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/news/article-20271.htm" title="宠物零食制作设备和配方有哪些呢（宠物零食制作设备和配方有哪些呢英语）">宠物零食制作设备和配方有哪些呢（宠物零食制作设备和配方有哪些呢英语）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-6-latest-quantumult-x-node.htm" title="「9月6日」最高速度18.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月6日」最高速度18.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-25334.htm" title="南京宠物猫领养中心地址电话查询（南京猫咪领养中心）">南京宠物猫领养中心地址电话查询（南京猫咪领养中心）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-14-quantumult-x-node-share.htm" title="「11月14日」最高速度20.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月14日」最高速度20.3M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-10-18-free-node-subscribe.htm" title="「10月18日」最高速度19.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月18日」最高速度19.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-7-node-share-links.htm" title="「9月7日」最高速度19.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「9月7日」最高速度19.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-24-node-share.htm" title="「10月24日」最高速度21.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月24日」最高速度21.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-28-latest-quantumult-x-node.htm" title="「8月28日」最高速度19.3M/S，2024年QuantumultX每天更新免费机场订阅节点链接">「8月28日」最高速度19.3M/S，2024年QuantumultX每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-30-quantumult-x-github.htm" title="「10月30日」最高速度20.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「10月30日」最高速度20.4M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-12-node-share-links.htm" title="「11月12日」最高速度21M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月12日」最高速度21M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-2-quantumult-x-node-github.htm" title="「11月2日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接">「11月2日」最高速度18.6M/S，2024年QuantumultX(圈X)每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-24872.htm" title="如何在MySQL中将算术运算符（+，-，*，/）与INTERVAL关键字的单位值一起使用？">如何在MySQL中将算术运算符（+，-，*，/）与INTERVAL关键字的单位值一起使用？</a></li>
+                        <li class="py-2"><a href="/news/article-27190.htm" title="动物疫苗注射方法及部位（动物 疫苗）">动物疫苗注射方法及部位（动物 疫苗）</a></li>
                     </ul>
     </div>
 </div>
@@ -145,7 +146,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -176,6 +177,15 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
                                 <p>
                                     <a href="/">QuantumultX Github(圈X)节点订阅官网</a> 版权所有 Powered by WordPress
                                 </p>
