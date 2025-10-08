@@ -1,4 +1,4 @@
-# 「10月2日」最高速度22.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享  更新时间 2025-10-02 10:14:49
+# 「10月8日」最高速度21.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享  更新时间 2025-10-08 10:10:46
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://quantumultxgithub.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://quantumultxgithub.github.io/uploads/2025/10/0-20251002.yaml
-- https://quantumultxgithub.github.io/uploads/2025/10/1-20251002.yaml
-- https://quantumultxgithub.github.io/uploads/2025/10/2-20251002.yaml
-- https://quantumultxgithub.github.io/uploads/2025/10/3-20251002.yaml
-- https://quantumultxgithub.github.io/uploads/2025/10/4-20251002.yaml
+- https://quantumultxgithub.github.io/uploads/2025/10/0-20251008.yaml
+- https://quantumultxgithub.github.io/uploads/2025/10/1-20251008.yaml
+- https://quantumultxgithub.github.io/uploads/2025/10/2-20251008.yaml
+- https://quantumultxgithub.github.io/uploads/2025/10/3-20251008.yaml
+- https://quantumultxgithub.github.io/uploads/2025/10/4-20251008.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://quantumultxgithub.github.io/uploads/2025/10/0-20251002.txt
-- https://quantumultxgithub.github.io/uploads/2025/10/1-20251002.txt
-- https://quantumultxgithub.github.io/uploads/2025/10/2-20251002.txt
-- https://quantumultxgithub.github.io/uploads/2025/10/3-20251002.txt
-- https://quantumultxgithub.github.io/uploads/2025/10/4-20251002.txt
+- https://quantumultxgithub.github.io/uploads/2025/10/0-20251008.txt
+- https://quantumultxgithub.github.io/uploads/2025/10/1-20251008.txt
+- https://quantumultxgithub.github.io/uploads/2025/10/2-20251008.txt
+- https://quantumultxgithub.github.io/uploads/2025/10/3-20251008.txt
+- https://quantumultxgithub.github.io/uploads/2025/10/4-20251008.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://quantumultxgithub.github.io/uploads/2025/10/20251002.json
+- https://quantumultxgithub.github.io/uploads/2025/10/20251008.json
 
 ## 更多Clash节点订阅 ：
 
