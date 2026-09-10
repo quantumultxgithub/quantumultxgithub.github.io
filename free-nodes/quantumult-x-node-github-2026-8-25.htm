@@ -330,14 +330,14 @@ Surfboard自动监控网络状态，遇到连接不畅时会自动切换至最�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 节点手动切换有什么优势？</h5></div>
+    <div class="panel-heading"><h5>如何将 Clash 节点导入到 Sing-box？</h5></div>
     <div class="panel-body">
-        手动切换节点可以让用户根据网络延迟和用途选择最合适的节点，适合在节点不稳定或特殊访问需求下使用。虽然不自动，但可以灵活调整，提高访问效率。<hr />    </div>
+        Sing-box 支持从 Clash 配置文件中导入节点。用户只需将 YAML 文件放入配置目录或通过命令导入即可。系统会自动解析规则组和节点信息，简化迁移过程。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 可以结合规则实现广告屏蔽吗？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 与 Shadowrocket 有什么区别？</h5></div>
     <div class="panel-body">
-        可以。Surfboard 支持通过规则文件匹配广告域名或 URL，将其阻断或重定向。结合策略组定期更新规则，可以实现自动广告屏蔽，提升网页浏览体验并节省带宽。<hr />    </div>
+        两者都是 iOS 上的代理工具。Shadowrocket 功能更全面、更新更频繁，而 Surfboard 以轻量和快速见长。若只需简单分流与节点切换，Surfboard 足以满足日常使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan-Go 的多路复用（mux）如何开启？</h5></div>
@@ -345,29 +345,19 @@ Surfboard自动监控网络状态，遇到连接不畅时会自动切换至最�
         Trojan-Go 在配置文件中通过启用 mux 参数即可实现多路复用。此功能允许多个连接共享同一隧道，减少握手延迟并提升整体传输效率，尤其在移动网络中表现出色。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 相比 VMess 的主要改进是什么？</h5></div>
-    <div class="panel-body">
-        VLESS 是 VMess 的后继协议，移除了加密层以减少服务器资源消耗，同时提供更灵活的加密与传输方式选择。它更轻量、可扩展性更好，常被用于与 XTLS 等新传输协议搭配使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何将 Clash 节点导入到 Sing-box？</h5></div>
-    <div class="panel-body">
-        Sing-box 支持从 Clash 配置文件中导入节点。用户只需将 YAML 文件放入配置目录或通过命令导入即可。系统会自动解析规则组和节点信息，简化迁移过程。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在封锁网络中有什么优势？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可以防止数据被篡改和流量特征泄露，降低被检测风险。在封锁较高的网络环境中，保证节点长期可用，提高数据传输安全性和访问可靠性，增强用户体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 节点订阅如何实现自动更新？</h5></div>
-    <div class="panel-body">
-        用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Clash.Meta 与原版 Clash 有何不同？</h5></div>
     <div class="panel-body">
         Clash.Meta 是社区优化版本，支持更多传输协议，如 Hysteria、TUIC、Reality 等。它还增强了 DNS 处理逻辑和脚本分流能力，适合追求极致速度和灵活规则配置的高级用户。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 可以结合规则实现广告屏蔽吗？</h5></div>
+    <div class="panel-body">
+        可以。Surfboard 支持通过规则文件匹配广告域名或 URL，将其阻断或重定向。结合策略组定期更新规则，可以实现自动广告屏蔽，提升网页浏览体验并节省带宽。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS 相比 VMess 的主要改进是什么？</h5></div>
+    <div class="panel-body">
+        VLESS 是 VMess 的后继协议，移除了加密层以减少服务器资源消耗，同时提供更灵活的加密与传输方式选择。它更轻量、可扩展性更好，常被用于与 XTLS 等新传输协议搭配使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 多路复用在短连接中优势是什么？</h5></div>
@@ -375,9 +365,19 @@ Surfboard自动监控网络状态，遇到连接不畅时会自动切换至最�
         多路复用允许多个短连接共享同一通道，减少握手延迟和资源消耗。适合高频短连接场景，如游戏和即时通讯，提升吞吐量和连接稳定性，优化网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 与 Shadowrocket 有什么区别？</h5></div>
+    <div class="panel-heading"><h5>VMess AEAD 加密在封锁网络中有什么优势？</h5></div>
     <div class="panel-body">
-        两者都是 iOS 上的代理工具。Shadowrocket 功能更全面、更新更频繁，而 Surfboard 以轻量和快速见长。若只需简单分流与节点切换，Surfboard 足以满足日常使用。    </div>
+        AEAD 加密可以防止数据被篡改和流量特征泄露，降低被检测风险。在封锁较高的网络环境中，保证节点长期可用，提高数据传输安全性和访问可靠性，增强用户体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 节点手动切换有什么优势？</h5></div>
+    <div class="panel-body">
+        手动切换节点可以让用户根据网络延迟和用途选择最合适的节点，适合在节点不稳定或特殊访问需求下使用。虽然不自动，但可以灵活调整，提高访问效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 节点订阅如何实现自动更新？</h5></div>
+    <div class="panel-body">
+        用户可添加订阅 URL，Nekoray 会定期自动下载并更新节点列表。保持节点最新可减少手动维护，提高节点可用性和网络连接稳定性，确保科学上网体验顺畅。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -425,16 +425,16 @@ Surfboard自动监控网络状态，遇到连接不畅时会自动切换至最�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-quantumult-x-node.htm" title="「8月22日」最高速度21.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月22日」最高速度21.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/latest-quantumult-x-node-2026-8-5.htm" title="「8月5日」最高速度22.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月5日」最高速度22.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-8-free-node-subscribe.htm" title="「8月8日」最高速度19.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月8日」最高速度19.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-3.htm" title="「9月3日」最高速度22.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月3日」最高速度22.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-12-node-share.htm" title="「8月12日」最高速度19.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月12日」最高速度19.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-7.htm" title="「8月7日」最高速度18.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月7日」最高速度18.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-9.htm" title="「8月9日」最高速度19.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月9日」最高速度19.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-github-2026-8-25.htm" title="「8月25日」最高速度22.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月25日」最高速度22.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-26-quantumult-x-node.htm" title="「8月26日」最高速度21.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月26日」最高速度21.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-20-today-quantumult-x-node.htm" title="「8月20日」最高速度18.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月20日」最高速度18.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-4-free-node-subscribe.htm" title="「8月4日」最高速度22.3M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月4日」最高速度22.3M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-18-free-node-subscribe.htm" title="「8月18日」最高速度22.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月18日」最高速度22.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-github-2026-8-15.htm" title="「8月15日」最高速度20.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月15日」最高速度20.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-share-2026-8-11.htm" title="「8月11日」最高速度18.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月11日」最高速度18.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-quantumult-x-node.htm" title="「8月6日」最高速度20.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月6日」最高速度20.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-28-quantumult-x-github.htm" title="「8月28日」最高速度21.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月28日」最高速度21.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-node-share.htm" title="「9月4日」最高速度20.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月4日」最高速度20.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-29.htm" title="「8月29日」最高速度21.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月29日」最高速度21.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -446,10 +446,10 @@ Surfboard自动监控网络状态，遇到连接不畅时会自动切换至最�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
