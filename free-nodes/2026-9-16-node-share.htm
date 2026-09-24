@@ -356,29 +356,9 @@ FINAL,DIRECT
         AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下保证节点可用，提升数据安全和连接稳定性，同时降低被检测风险，确保长期安全访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的规则订阅更新频率如何设置？</h5></div>
-    <div class="panel-body">
-        Clash 支持设置订阅规则的更新频率，例如每小时或每天。定期更新可保证节点和规则最新，减少手动维护，提高访问速度和分流效率，同时保持网络稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>如何识别节点是否被封锁或限速？</h5></div>
     <div class="panel-body">
         通过对比不同节点的 speedtest、ping、下载测速以及 traceroute 路由变化来判断；若多个节点同时异常可能是本地网络问题，单个节点异常则可能被封锁或运营商限速，应尝试更换端口或传输方式。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 节点的 alterId 参数还需要设置吗？</h5></div>
-    <div class="panel-body">
-        在新版 V2Ray/Xray 内核中，alterId 已被废弃，不再影响认证逻辑。建议用户设置为 0 或删除该字段，以避免连接异常或不兼容情况。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何自动切换最优节点？</h5></div>
-    <div class="panel-body">
-        PassWall2 会定期测试节点延迟和丢包率，并结合策略组自动切换到最优节点。无需手动干预即可保证网页、视频和游戏流量高速稳定访问，优化整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 协议如何提高节点隐蔽性？</h5></div>
-    <div class="panel-body">
-        SSR 可通过选择协议和混淆方式伪装流量，降低被 DPI 检测和封锁风险。合理配置可增强节点隐蔽性和长期稳定性，保证科学上网体验顺畅可靠。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 的节点排序依据是什么？</h5></div>
@@ -391,14 +371,34 @@ FINAL,DIRECT
         Hiddify Next 面板可添加或删除用户、设置带宽限制、生成订阅链接、查看流量统计和节点状态。它提供直观的图形界面，无需命令行操作即可管理服务器资源。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的规则订阅更新频率如何设置？</h5></div>
+    <div class="panel-body">
+        Clash 支持设置订阅规则的更新频率，例如每小时或每天。定期更新可保证节点和规则最新，减少手动维护，提高访问速度和分流效率，同时保持网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 如何自动切换最优节点？</h5></div>
+    <div class="panel-body">
+        PassWall2 会定期测试节点延迟和丢包率，并结合策略组自动切换到最优节点。无需手动干预即可保证网页、视频和游戏流量高速稳定访问，优化整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
     <div class="panel-body">
         XTLS 降低加密开销，减少握手次数，适合高延迟或不稳定的移动网络。结合策略组和多出口节点，可提升访问速度和连接稳定性，确保用户体验流畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 节点的 alterId 参数还需要设置吗？</h5></div>
+    <div class="panel-body">
+        在新版 V2Ray/Xray 内核中，alterId 已被废弃，不再影响认证逻辑。建议用户设置为 0 或删除该字段，以避免连接异常或不兼容情况。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>如何使用 Sing-box 配合 Clash Rules 实现精细分流？</h5></div>
     <div class="panel-body">
-        将 Clash 的 rules 段提取出来转换为 Sing-box 的 routing 格式，或直接引用 rule-providers 源。Sing-box 的路由引擎支持更复杂的条件匹配，可结合 GeoIP 与 keyword 实现精细分流策略。    </div>
+        将 Clash 的 rules 段提取出来转换为 Sing-box 的 routing 格式，或直接引用 rule-providers 源。Sing-box 的路由引擎支持更复杂的条件匹配，可结合 GeoIP 与 keyword 实现精细分流策略。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 协议如何提高节点隐蔽性？</h5></div>
+    <div class="panel-body">
+        SSR 可通过选择协议和混淆方式伪装流量，降低被 DPI 检测和封锁风险。合理配置可增强节点隐蔽性和长期稳定性，保证科学上网体验顺畅可靠。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -446,16 +446,16 @@ FINAL,DIRECT
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-3.htm" title="「9月3日」最高速度22.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月3日」最高速度22.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/latest-quantumult-x-node-2026-9-11.htm" title="「9月11日」最高速度21.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月11日」最高速度21.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-15.htm" title="「9月15日」最高速度20.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月15日」最高速度20.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-8-free-node-subscribe.htm" title="「8月8日」最高速度19.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月8日」最高速度19.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-10-free-subscribe-node.htm" title="「8月10日」最高速度21.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月10日」最高速度21.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-github-2026-8-25.htm" title="「8月25日」最高速度22.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月25日」最高速度22.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-quantumult-x-github.htm" title="「9月2日」最高速度19.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月2日」最高速度19.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-github-2026-8-15.htm" title="「8月15日」最高速度20.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月15日」最高速度20.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-6-free-node-subscribe.htm" title="「9月6日」最高速度20.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月6日」最高速度20.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-19.htm" title="「9月19日」最高速度18.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月19日」最高速度18.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-18-free-node-subscribe.htm" title="「8月18日」最高速度22.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月18日」最高速度22.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-16-free-subscribe-node.htm" title="「8月16日」最高速度20.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月16日」最高速度20.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-30-free-subscribe-node.htm" title="「8月30日」最高速度18.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月30日」最高速度18.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-29.htm" title="「8月29日」最高速度21.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月29日」最高速度21.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-8-free-node-subscribe.htm" title="「8月8日」最高速度19.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月8日」最高速度19.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-18-free-quantumult-x-node.htm" title="「9月18日」最高速度18.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月18日」最高速度18.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-13.htm" title="「9月13日」最高速度18.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月13日」最高速度18.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-28-quantumult-x-github.htm" title="「8月28日」最高速度21.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月28日」最高速度21.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-7.htm" title="「8月7日」最高速度18.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月7日」最高速度18.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -467,7 +467,7 @@ FINAL,DIRECT
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">17</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>

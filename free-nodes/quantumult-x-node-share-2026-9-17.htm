@@ -403,12 +403,13 @@ GitHub、Telegram群组等是了解功能变更和新特性的好地方。</p>
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-9-16-node-share.htm">「9月16日」最高速度18.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a></p>
+        <p>下一个：<a href="/free-nodes/2026-9-18-free-quantumult-x-node.htm">「9月18日」最高速度18.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的节点测速如何优化策略组选择？</h5></div>
+    <div class="panel-heading"><h5>如何防止租用服务器被用作滥发或代理滥用？</h5></div>
     <div class="panel-body">
-        Shadowrocket 会测量节点延迟和丢包率，将低延迟节点优先使用。结合策略组和规则文件，可保证网页、视频和游戏流量走最佳节点，提高访问速度和连接稳定性。<hr />    </div>
+        限制对外端口与协议，使用防火墙与入侵检测（如 fail2ban），监控流量异常并设置告警，定期审计登录行为，及时阻断滥用源并与服务商沟通封禁滥用账户以防引起供应商封禁整台机。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何在 Windows 上用 Wireshark 分析代理流量以排查问题？</h5></div>
@@ -416,24 +417,9 @@ GitHub、Telegram群组等是了解功能变更和新特性的好地方。</p>
         使用 Wireshark 抓取对应网卡流量，结合过滤器（例如 host <server_ip> 或 tcp.port==<port>）分析握手与数据包内容。注意 TLS/QUIC 流量为加密内容，仅能通过元信息（时延、丢包）判断异常，不要尝试解密用户隐私。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的策略组支持哪些节点选择策略？</h5></div>
+    <div class="panel-heading"><h5>VMess 连接延迟过高该如何优化？</h5></div>
     <div class="panel-body">
-        支持按延迟选择、随机选择、轮询或手动选择节点。结合规则匹配，用户可实现不同网站或应用使用不同节点，提高访问速度和网络稳定性，同时降低管理复杂度。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何防止租用服务器被用作滥发或代理滥用？</h5></div>
-    <div class="panel-body">
-        限制对外端口与协议，使用防火墙与入侵检测（如 fail2ban），监控流量异常并设置告警，定期审计登录行为，及时阻断滥用源并与服务商沟通封禁滥用账户以防引起供应商封禁整台机。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的内核能否替换？</h5></div>
-    <div class="panel-body">
-        可以。WinXray 的内核文件独立存在于程序目录中，用户可替换为最新的 v2ray-core 或 xray-core 文件以获取更好的性能与协议支持，但需保持版本兼容。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 中自定义脚本导致规则异常，该如何恢复？</h5></div>
-    <div class="panel-body">
-        先停用或删除最近添加的自定义脚本，重启应用并观察网络行为是否恢复。若无法恢复，备份并重置配置为默认，然后逐个添加脚本以定位导致异常的具体脚本并修复。<hr />    </div>
+        可尝试切换传输协议（如 WS、gRPC）、调整 MTU 或启用 MUX 多路复用功能。同时检查服务器地理位置、带宽和延迟，并选择最优节点以降低延迟。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 节点测速功能如何优化游戏体验？</h5></div>
@@ -441,19 +427,34 @@ GitHub、Telegram群组等是了解功能变更和新特性的好地方。</p>
         Shadowrocket 会定期测速节点延迟和丢包率，并结合策略组自动切换最佳节点。保证游戏流量走低延迟节点，减少延迟和掉线，提高游戏流畅度和稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的内核能否替换？</h5></div>
+    <div class="panel-body">
+        可以。WinXray 的内核文件独立存在于程序目录中，用户可替换为最新的 v2ray-core 或 xray-core 文件以获取更好的性能与协议支持，但需保持版本兼容。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的策略组支持哪些节点选择策略？</h5></div>
+    <div class="panel-body">
+        支持按延迟选择、随机选择、轮询或手动选择节点。结合规则匹配，用户可实现不同网站或应用使用不同节点，提高访问速度和网络稳定性，同时降低管理复杂度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 是否支持多节点手动管理？</h5></div>
+    <div class="panel-body">
+        支持。用户可以手动输入节点参数或扫描二维码导入节点，并可进行修改或删除。虽然不支持订阅自动更新，但足够满足轻量用户对节点管理和分流的基本需求。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 如何通过策略组优化访问速度？</h5></div>
     <div class="panel-body">
         策略组允许用户将节点按延迟、地域或用途分组。结合路由规则，V2Ray 会自动选择最优节点处理流量，提升访问速度并降低延迟，尤其在访问海外网站时效果明显。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 连接延迟过高该如何优化？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 的节点测速如何优化策略组选择？</h5></div>
     <div class="panel-body">
-        可尝试切换传输协议（如 WS、gRPC）、调整 MTU 或启用 MUX 多路复用功能。同时检查服务器地理位置、带宽和延迟，并选择最优节点以降低延迟。<hr />    </div>
+        Shadowrocket 会测量节点延迟和丢包率，将低延迟节点优先使用。结合策略组和规则文件，可保证网页、视频和游戏流量走最佳节点，提高访问速度和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 是否支持多节点手动管理？</h5></div>
+    <div class="panel-heading"><h5>Quantumult X 中自定义脚本导致规则异常，该如何恢复？</h5></div>
     <div class="panel-body">
-        支持。用户可以手动输入节点参数或扫描二维码导入节点，并可进行修改或删除。虽然不支持订阅自动更新，但足够满足轻量用户对节点管理和分流的基本需求。    </div>
+        先停用或删除最近添加的自定义脚本，重启应用并观察网络行为是否恢复。若无法恢复，备份并重置配置为默认，然后逐个添加脚本以定位导致异常的具体脚本并修复。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -501,15 +502,15 @@ GitHub、Telegram群组等是了解功能变更和新特性的好地方。</p>
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-5.htm" title="「9月5日」最高速度21.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月5日」最高速度21.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-windows-2026-8-31.htm" title="「8月31日」最高速度20.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月31日」最高速度20.2M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-share-2026-9-17.htm" title="「9月17日」最高速度20.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月17日」最高速度20.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-quantumult-x-github.htm" title="「9月2日」最高速度19.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月2日」最高速度19.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-19.htm" title="「8月19日」最高速度20.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月19日」最高速度20.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-29.htm" title="「8月29日」最高速度21.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月29日」最高速度21.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-10-free-subscribe-node.htm" title="「8月10日」最高速度21.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月10日」最高速度21.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/quantumult-x-node-github-2026-8-25.htm" title="「8月25日」最高速度22.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月25日」最高速度22.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-quantumult-x-node.htm" title="「8月22日」最高速度21.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月22日」最高速度21.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-17.htm" title="「8月17日」最高速度18.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月17日」最高速度18.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-21.htm" title="「9月21日」最高速度18.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月21日」最高速度18.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-quantumult-x-node.htm" title="「8月6日」最高速度20.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月6日」最高速度20.6M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-9.htm" title="「8月9日」最高速度19.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月9日」最高速度19.1M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-30-free-subscribe-node.htm" title="「8月30日」最高速度18.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月30日」最高速度18.8M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-20-free-node-subscribe.htm" title="「9月20日」最高速度22.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月20日」最高速度22.4M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-12-free-subscribe-node.htm" title="「9月12日」最高速度18.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月12日」最高速度18.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-node-share.htm" title="「9月4日」最高速度20.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月4日」最高速度20.5M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-16-node-share.htm" title="「9月16日」最高速度18.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「9月16日」最高速度18.7M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-18-free-node-subscribe.htm" title="「8月18日」最高速度22.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享">「8月18日」最高速度22.9M/S，2025年QuantumultX(圈X)每天更新免费订阅地址分享</a><hr /></li>
                     </ul>
     </div>
@@ -522,7 +523,7 @@ GitHub、Telegram群组等是了解功能变更和新特性的好地方。</p>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">17</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
